@@ -21,8 +21,9 @@
 	&__poster {
 		max-height: 10rem;
 		object-fit: contain;
-		margin-right: 1rem;
+		margin-right: 2rem;
 		transition: transform 0.45s;
+		border-radius: 1.5rem;
 
 		&:hover {
 			transform: scale(1.08);

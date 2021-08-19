@@ -1,0 +1,98 @@
+.login {
+	position: relative;
+	height: 100%;
+	background: url('http://s3-us-west-2.amazonaws.com/techvibes/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg')
+		center no-repeat;
+	background-size: cover;
+	overflow: hidden;
+
+	&__logo {
+		position: fixed;
+		left: 0;
+		width: 15rem;
+		object-fit: contain;
+		padding-left: 2rem;
+	}
+
+	&__button {
+		position: fixed;
+		right: 2rem;
+		top: 2rem;
+		padding: 1rem 2rem;
+		font-size: 1.6rem;
+		background-color: #e50914;
+		cursor: pointer;
+		font-weight: 600;
+		border: 0;
+		color: #fff;
+		border-radius: 0.5rem;
+	}
+
+	&__gradient {
+		width: 100%;
+		z-index: 1;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.4)
+			linear-gradient(
+				to top,
+				rgba(0, 0, 0, 0.8) 0,
+				rgba(0, 0, 0, 0) 60%,
+				rgba(0, 0, 0, 0.8) 100%
+			);
+	}
+
+	&__body {
+		position: absolute;
+		top: 30%;
+		width: 100%;
+		z-index: 1;
+		color: #fff;
+		padding: 2rem;
+		margin: 0 auto;
+		text-align: center;
+
+		h1 {
+			font-size: 4.2rem;
+			margin-bottom: 2rem;
+		}
+
+		h2 {
+			font-size: 3.2rem;
+			font-weight: 400;
+			margin-bottom: 3rem;
+		}
+
+		h3 {
+			font-size: 1.8rem;
+			font-weight: 400;
+		}
+	}
+
+	&__input {
+		margin: 2rem;
+
+		form {
+			input {
+				font-size: 1.6rem;
+				padding: 1rem;
+				outline-width: 0;
+				height: 3rem;
+				width: 30%;
+				border: 0;
+				max-width: 60rem;
+				border-radius: 2rem 0 0 2rem;
+			}
+		}
+	}
+
+	&__getStarted {
+		font-size: 1.6rem;
+		padding: 1.6rem 2rem;
+		border: 0;
+		color: #fff;
+		background: #e50914;
+		border-radius: 0 2rem 2rem 0;
+		font-weight: 600;
+		cursor: pointer;
+	}
+}

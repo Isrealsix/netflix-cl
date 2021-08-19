@@ -1,8 +1,8 @@
-import Banner from '../banner/Banner';
-import NavBar from '../navbar/NavBar';
-import './HomeScreen.scss';
-import Row from '../row/Row';
-import requests from '../../Requests';
+import Banner from '../../banner/Banner';
+import NavBar from '../../navbar/NavBar';
+import './Home.scss';
+import Row from '../../row/Row';
+import requests from '../../../Requests';
 
 const HomeScreen = () => {
 	return (
