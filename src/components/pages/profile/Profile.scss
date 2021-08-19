@@ -1,0 +1,63 @@
+.profile {
+	height: 100vh;
+	color: #fff;
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		margin: 0 auto;
+		padding-top: 8%;
+		max-width: 800px;
+
+		h1 {
+			font-size: 6rem;
+			font-weight: 400;
+			margin-bottom: 2rem;
+			border-bottom: 0.1rem solid #282c2d;
+		}
+	}
+
+	&__info {
+		display: flex;
+
+		img {
+			height: 10rem;
+		}
+	}
+
+	&__details {
+		color: #fff;
+		margin-left: 2.5rem;
+		flex: 1;
+
+		h2 {
+			font-size: 1.6rem;
+			font-weight: 400;
+			background-color: gray;
+			padding: 1.5rem 1.5rem 1.5rem 2rem;
+		}
+	}
+
+	&__signout {
+		font-size: 1.6rem;
+		padding: 1rem 2rem;
+		margin-top: 5%;
+		width: 100%;
+		cursor: pointer;
+		color: #fff;
+		background-color: #e50914;
+		border: 0;
+		font-weight: 600;
+	}
+
+	&__plans {
+		margin-top: 2rem;
+
+		h3 {
+			border-bottom: 1px solid #282c2d;
+			font-size: 1.6rem;
+			padding-bottom: 1rem;
+		}
+	}
+}

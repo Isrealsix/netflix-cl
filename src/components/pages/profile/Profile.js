@@ -24,6 +24,7 @@ const Profile = () => {
 					<div className="profile__details">
 						<h2>{user.email}</h2>
 						<div className="profile__plans">
+							<h3>Plans</h3>
 							<button onClick={handleSignout} className="profile__signout">
 								Sign Out
 							</button>
