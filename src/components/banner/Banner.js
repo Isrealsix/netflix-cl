@@ -1,6 +1,26 @@
+import { useEffect, useState } from 'react';
 import './Banner.scss';
+import axios from '../../axios';
+import requests from '../../Requests';
 
 const Banner = () => {
+	const [movie, setMovie] = useState([]);
+
+	useEffect(() => {
+		const fetchMovie = async () => {
+			const request = await axios.get(requests.fetchNetflixOriginals);
+			setMovie(
+				request.data.results[
+					Math.floor(Math.random() * request.data.results.length - 1)
+				]
+			);
+			return request;
+		};
+		fetchMovie();
+	}, []);
+
+	console.log(movie);
+
 	// Induced a function to truncate long text
 	const trunc = (string, length) =>
 		string?.length > length ? string.substr(0, length - 1) + '...' : string;
@@ -8,27 +28,20 @@ const Banner = () => {
 		<header
 			className="banner"
 			style={{
-				backgroundImage: `url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_flag.svg/1200px-Black_flag.svg.png')`,
+				backgroundImage: `url('https://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`,
 				backgroundSize: 'cover',
 				backgroundPosition: 'center center',
 			}}
 		>
 			<div className="banner__contents">
-				<h1 className="banner__title">Movie Name</h1>
+				<h1 className="banner__title">
+					{movie?.title ?? movie?.name ?? movie?.original_name}
+				</h1>
 				<div className="banner__buttons">
 					<button className="banner__button">Play</button>
 					<button className="banner__button">My List</button>
 				</div>
-				<h1 className="banner__description">
-					{trunc(
-						`This is a weird Description area This is a weird Description area This
-					is a weird Description area This is a weird Description area This is a
-					weird Description area This is a weird Description area This is a
-					weird Description area This is a weird Description area This is a
-					weird Description area This is a weird Description area`,
-						150
-					)}
-				</h1>
+				<h1 className="banner__description">{trunc(movie?.overview, 150)}</h1>
 			</div>
 			<div className="banner--fadeBottom"></div>
 		</header>
