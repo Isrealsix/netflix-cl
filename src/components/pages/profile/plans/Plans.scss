@@ -1,0 +1,32 @@
+.plans {
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		padding: 2rem;
+		opacity: 0.8;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		button {
+			padding: 1rem 2rem;
+			font-size: 1.6rem;
+			color: #fff;
+			background-color: #e50914;
+			border: 0;
+			font-weight: 600;
+			cursor: pointer;
+		}
+	}
+
+	&__info {
+		h5 {
+			font-size: 1.6rem;
+			margin-bottom: 0.7rem;
+		}
+		h6 {
+			font-size: 1rem;
+		}
+	}
+}
