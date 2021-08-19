@@ -1,0 +1,60 @@
+.signUpWindow {
+	max-width: 30rem;
+	padding: 7rem;
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0.85);
+	border-radius: 0.8rem;
+
+	form {
+		display: grid;
+		flex-direction: column;
+
+		h1 {
+			text-align: left;
+			margin-bottom: 2.5rem;
+			font-weight: 400;
+		}
+
+		h4 {
+			text-align: left;
+			margin-top: 3rem;
+			font-size: 1.6rem;
+		}
+
+		input {
+			font-size: 1.6rem;
+			padding: 0.5rem 1.6rem;
+			outline-width: 0;
+			height: 4rem;
+			border: 0;
+			max-width: 60rem;
+			margin-bottom: 1.4rem;
+			border-radius: 0.8rem;
+		}
+
+		button {
+			border: 0;
+			padding: 1.6rem 2rem;
+			border-radius: 0.8rem;
+			color: #fff;
+			background-color: #e50914;
+			font-size: 1.6rem;
+			cursor: pointer;
+			font-weight: 600;
+		}
+	}
+
+	&__link {
+		font-size: 1.6rem;
+		margin-left: 0.5rem;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__gray {
+		color: gray;
+		font-size: 1.6rem;
+	}
+}
