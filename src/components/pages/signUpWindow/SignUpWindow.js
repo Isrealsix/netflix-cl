@@ -1,8 +1,10 @@
 import { useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import { auth } from '../../../firebase';
 import './SignUpWindow.scss';
 
 const SignUpWindow = () => {
+	const history = useHistory();
 	const passwordRef = useRef('');
 	const emailRef = useRef('');
 	const handleRegistration = ev => {
@@ -27,7 +29,9 @@ const SignUpWindow = () => {
 				emailRef.current.value,
 				passwordRef.current.value
 			)
-			.then(authUser => {})
+			.then(authUser => {
+				history.push('/');
+			})
 			.catch(error => {
 				alert(error);
 			});
